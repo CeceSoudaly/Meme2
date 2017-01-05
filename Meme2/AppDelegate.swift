@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Meme2
+//  MemeMe1
 //
-//  Created by Cece Soudaly on 1/3/17.
-//  Copyright © 2017 CeceMobile. All rights reserved.
+//  Created by Cece Soudaly on 10/13/16.
+//  Copyright © 2016 CeceMobile. All rights reserved.
 //
 
 import UIKit
