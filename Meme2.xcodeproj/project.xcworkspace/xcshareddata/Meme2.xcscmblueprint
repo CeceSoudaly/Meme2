@@ -1,18 +1,22 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F4C1346F8A3D0777A1AA9120FE85006592E7699D",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++756A3F2",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "1631FF53462714BE7F15A002C55FCD18819C9CF2" : 9223372036854775807,
-    "2B47C97D8EE3E3297CC6EBA5B1698D7089F339B9" : 9223372036854775807,
-    "F4C1346F8A3D0777A1AA9120FE85006592E7699D" : 9223372036854775807
+    "2B47C97D8EE3E3297CC6EBA5B1698D7089F339B9+++4024A61" : 9223372036854775807,
+    "1631FF53462714BE7F15A002C55FCD18819C9CF2+++9E7E3C1" : 9223372036854775807,
+    "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++7B32BD8" : 9223372036854775807,
+    "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++756A3F2" : 9223372036854775807,
+    "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++DC22A3D" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E93E33E1-3F91-465D-9F88-6DBB489EC7E0",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "1631FF53462714BE7F15A002C55FCD18819C9CF2" : "..",
-    "2B47C97D8EE3E3297CC6EBA5B1698D7089F339B9" : "",
-    "F4C1346F8A3D0777A1AA9120FE85006592E7699D" : "Meme2\/"
+    "2B47C97D8EE3E3297CC6EBA5B1698D7089F339B9+++4024A61" : "",
+    "1631FF53462714BE7F15A002C55FCD18819C9CF2+++9E7E3C1" : "..",
+    "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++7B32BD8" : "Meme2\/",
+    "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++756A3F2" : "Meme2-master\/",
+    "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++DC22A3D" : "Meme2\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Meme2",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -21,17 +25,27 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CeceSoudaly\/Photo",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1631FF53462714BE7F15A002C55FCD18819C9CF2"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1631FF53462714BE7F15A002C55FCD18819C9CF2+++9E7E3C1"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CeceSoudaly\/Meme2.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B47C97D8EE3E3297CC6EBA5B1698D7089F339B9"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B47C97D8EE3E3297CC6EBA5B1698D7089F339B9+++4024A61"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CeceSoudaly\/Meme2",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++756A3F2"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CeceSoudaly\/Meme2.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F4C1346F8A3D0777A1AA9120FE85006592E7699D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++7B32BD8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CeceSoudaly\/Meme2",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F4C1346F8A3D0777A1AA9120FE85006592E7699D+++DC22A3D"
     }
   ]
 }

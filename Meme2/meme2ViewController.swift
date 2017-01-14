@@ -142,7 +142,7 @@ UINavigationControllerDelegate{
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
         
-         print("1 adding... ",appDelegate.memes)
+         print("1 hello... ",appDelegate.memes)
          print("2 adding... ",appDelegate.memes.count)
         
         memes = appDelegate.memes
