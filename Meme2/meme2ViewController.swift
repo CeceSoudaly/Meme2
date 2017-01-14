@@ -14,7 +14,7 @@ import Social
 
 
 
-class ViewController: UIViewController , UITextFieldDelegate, UIImagePickerControllerDelegate,
+class Meme2ViewController: UIViewController , UITextFieldDelegate, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     
     @IBOutlet weak var imagePicker: UIImageView!
@@ -144,6 +144,10 @@ UINavigationControllerDelegate{
         
          print("1 adding... ",appDelegate.memes)
          print("2 adding... ",appDelegate.memes.count)
+        
+        memes = appDelegate.memes
+        
+        print("pour over... ",memes.count)
     }
     
     func generateMemedImage() -> UIImage {
@@ -211,10 +215,21 @@ UINavigationControllerDelegate{
         return true;
     }
     
+    static var allMemes: [Meme] {
+        
+        var memesArray = [Meme]()
+        
+        //        for d in Villain.localVillainData() {
+        //            villainArray.append(Villain(dictionary: d))
+        //        }
+        
+        return memesArray
+    }
+    
     func subscribeToKeyboardNotifications() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Meme2ViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Meme2ViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
     }
     
