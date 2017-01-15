@@ -19,6 +19,15 @@ class SendMemeTableController: UIViewController, UITableViewDataSource, UITableV
     // This is an array of Villain instances
     let allMemes = Meme2ViewController.allMemes
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+        
+        
+        print("how many saved ",self.allMemes.count)
+        
+    }
     // MARK: Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +37,7 @@ class SendMemeTableController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeViewCell")!
-        let villain = self.allMemes[(indexPath as NSIndexPath).row]
+        let memes = self.allMemes[(indexPath as NSIndexPath).row]
         
 //        // Set the name and image
 //        cell.textLabel?.text = villain.name

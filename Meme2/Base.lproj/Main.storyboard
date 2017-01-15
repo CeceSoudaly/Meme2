@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-2587" y="-37"/>
         </scene>
-        <!--Sent Meme Collection View Controller-->
+        <!--Send Meme Collection Controller-->
         <scene sceneID="s89-uV-gBA">
             <objects>
-                <collectionViewController id="AhY-oN-mP9" customClass="SentMemeCollectionViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="AhY-oN-mP9" customClass="SendMemeCollectionController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Z7x-N4-Wv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="pCW-a8-v4z" userLabel="MemeCollectionViewCell" customClass="MemeCollectionViewCell" customModule="Meme2" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeViewCell" id="pCW-a8-v4z" customClass="MemeViewCell" customModule="Meme2" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="140" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -81,9 +81,9 @@
                                     <constraint firstItem="ien-Zj-gDu" firstAttribute="leading" secondItem="pCW-a8-v4z" secondAttribute="leadingMargin" id="ouX-vf-gAl"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="BottomLabel" destination="ien-Zj-gDu" id="CmL-Rr-xum"/>
-                                    <outlet property="ImageView" destination="mdK-pc-gu6" id="slY-YU-tzu"/>
-                                    <outlet property="TopLabel" destination="6Nv-bx-OsE" id="rxA-lW-DrH"/>
+                                    <outlet property="BottomLabel" destination="ien-Zj-gDu" id="VG9-gV-Zm5"/>
+                                    <outlet property="ImageView" destination="mdK-pc-gu6" id="67n-Lj-gXZ"/>
+                                    <outlet property="Toplabel" destination="6Nv-bx-OsE" id="QfR-du-iUr"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
