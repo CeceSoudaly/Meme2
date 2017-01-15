@@ -17,7 +17,7 @@ class SendMemeTableController: UIViewController, UITableViewDataSource, UITableV
     
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
-    let allMemes = Meme2ViewController.allMemes
+   var allMemes = [Meme]()
     
     
     override func viewWillAppear(_ animated: Bool) {

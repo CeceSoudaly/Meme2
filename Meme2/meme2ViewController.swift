@@ -145,9 +145,7 @@ UINavigationControllerDelegate{
          print("1 hello... ",appDelegate.memes)
          print("2 adding... ",appDelegate.memes.count)
         
-        memes = appDelegate.memes
-        
-        print("pour over... ",memes.count)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func generateMemedImage() -> UIImage {
@@ -213,17 +211,6 @@ UINavigationControllerDelegate{
         topText.resignFirstResponder();
         bottomText.resignFirstResponder();
         return true;
-    }
-    
-    static var allMemes: [Meme] {
-        
-        var memesArray = [Meme]()
-        
-        //        for d in Villain.localVillainData() {
-        //            villainArray.append(Villain(dictionary: d))
-        //        }
-        
-        return memesArray
     }
     
     func subscribeToKeyboardNotifications() {

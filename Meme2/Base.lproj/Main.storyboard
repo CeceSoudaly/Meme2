@@ -83,7 +83,7 @@
                                 <connections>
                                     <outlet property="BottomLabel" destination="ien-Zj-gDu" id="VG9-gV-Zm5"/>
                                     <outlet property="ImageView" destination="mdK-pc-gu6" id="67n-Lj-gXZ"/>
-                                    <outlet property="Toplabel" destination="6Nv-bx-OsE" id="QfR-du-iUr"/>
+                                    <outlet property="TopLabel" destination="6Nv-bx-OsE" id="uWU-ld-OWV"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

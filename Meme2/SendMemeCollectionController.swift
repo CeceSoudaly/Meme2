@@ -15,7 +15,10 @@ class SendMemeCollectionController: UICollectionViewController {
     // MARK: Life Cycle
     // Get ahold of some memes, for the table
     // This is an array of Memes instances
-    var allMemes = Meme2ViewController.allMemes
+//    let object = UIApplication.shared.delegate
+//    let appDelegate = object as! AppDelegate
+    
+    var allMemes = [Meme]()
     
     
     
@@ -39,15 +42,17 @@ class SendMemeCollectionController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
+        
+        //get the save Memes
+        
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
-    
-        
-        print("how many saved ",appDelegate.memes.count)
         
         allMemes = appDelegate.memes
-
-    }
+        
+        print("allMemes === ",allMemes.count)
+        collectionView?.reloadData()
+     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
