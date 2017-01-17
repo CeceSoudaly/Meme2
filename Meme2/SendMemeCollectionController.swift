@@ -75,7 +75,7 @@ class SendMemeCollectionController: UICollectionViewController {
         // Set the name and image
         cell.TopLabel.text = meme.topTextField
         cell.BottomLabel.text = meme.bottomTextField
-        cell.ImageView.image = meme.memedImage
+        cell.ImageView.image = meme.originalImage
         
         return cell
     }

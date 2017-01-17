@@ -36,17 +36,21 @@ class SendMemeTableController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeViewCell")!
-        let memes = self.allMemes[(indexPath as NSIndexPath).row]
+ //       let cell = tableView.dequeueReusableCell(withIdentifier: "MemeViewCell", for: indexPath) as! MemeViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell")!
+        let meme = self.allMemes[(indexPath as NSIndexPath).row]
+
+        // Set the name and image
+  /*      cell.TopLabel.text = meme.topTextField
+        cell.BottomLabel.text = meme.bottomTextField
+        cell.ImageView.image = meme.memedImage*/
+      
         
-//        // Set the name and image
-//        cell.textLabel?.text = villain.name
-//        cell.imageView?.image = UIImage(named: villain.imageName)
-//        
 //        // If the cell has a detail label, we will put the evil scheme in.
 //        if let detailTextLabel = cell.detailTextLabel {
 //            detailTextLabel.text = "Scheme: \(villain.evilScheme)"
 //        }
+        tableView.reloadData()
         
         return cell
     }
