@@ -12,9 +12,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: Properties
     
+    @IBOutlet weak var tableView: UITableView!
     // Get ahold of some villains, for the table
     // This is an array of Villain instances
     var allMemes = [Meme]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //TODO: Implement flowLayout here.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "EditMeme",
+            style: .plain,
+            target: self,
+            action: #selector(editMeme))
+    }
+    
+    func editMeme() {
+        let editController = self.storyboard!.instantiateViewController(withIdentifier: "Meme2ViewController") as! Meme2ViewController
+        
+        self.navigationController!.pushViewController(editController, animated: true)
+    }
     
     // MARK: Table View Data Source
     
@@ -30,7 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         allMemes = appDelegate.memes
         
         print("allMemes === ",allMemes.count)
-//        tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,7 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")!
         let meme = self.allMemes[(indexPath as NSIndexPath).row]
         
         // Set the name and image

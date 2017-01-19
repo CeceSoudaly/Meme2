@@ -175,7 +175,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="rUI-gw-pTe" id="4JV-da-u2w"/>
+                                    <outlet property="dataSource" destination="rUI-gw-pTe" id="Z1P-CS-vPh"/>
+                                    <outlet property="delegate" destination="rUI-gw-pTe" id="IMb-dx-Shi"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -188,6 +189,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LrS-rY-e26"/>
+                    <connections>
+                        <outlet property="tableView" destination="va4-Jl-OJn" id="LSA-MZ-AaV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Le0-Vb-30g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
