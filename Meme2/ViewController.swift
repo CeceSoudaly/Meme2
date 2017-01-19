@@ -1,23 +1,22 @@
 //
-//  SendMemeTableController.swift
+//  ViewController.swift
 //  Meme2
 //
-//  Created by Cece Soudaly on 1/14/17.
+//  Created by Cece Soudaly on 1/18/17.
 //  Copyright © 2017 CeceMobile. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-// MARK: - ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
-
-class SendMemeTableController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
-
     
-   var allMemes = [Meme]()
+    // Get ahold of some villains, for the table
+    // This is an array of Villain instances
+    var allMemes = [Meme]()
     
+    // MARK: Table View Data Source
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,36 +29,42 @@ class SendMemeTableController: UIViewController, UITableViewDataSource, UITableV
         
         allMemes = appDelegate.memes
         
-        print("table allMemes === ",allMemes.count)
+        print("allMemes === ",allMemes.count)
 //        tableView.reloadData()
     }
-   
-
-    // MARK: Table View Data Source
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+        
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allMemes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- 
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeTableViewCell")!
         let meme = self.allMemes[(indexPath as NSIndexPath).row]
- 
+        
         // Set the name and image
-        cell.textLabel?.text = meme.topTextField
-        cell.imageView?.image = meme.originalImage
+        cell.textLabel?.text = meme.bottomTextField
+        cell.imageView?.image =  meme.memedImage
         
-    
-        tableView.reloadData()
-        
+//        // If the cell has a detail label, we will put the evil scheme in.
+//        if let detailTextLabel = cell.detailTextLabel {
+//            detailTextLabel.text = "Scheme: \(villain.evilScheme)"
+//        }
+//         tableView.reloadData()
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        
 //        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! VillainDetailViewController
 //        detailController.villain = self.allVillains[(indexPath as NSIndexPath).row]
 //        self.navigationController!.pushViewController(detailController, animated: true)
-    }
+//    }
 }
