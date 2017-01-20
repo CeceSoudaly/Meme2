@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let meme = self.allMemes[(indexPath as NSIndexPath).row]
         
         // textfield1.text! + textfield2.text!
-        let first = meme.topTextField! + meme.bottomTextField! 
+        let first = meme.topTextField!+"..." + meme.bottomTextField!
        
         
         // Set the name and image
