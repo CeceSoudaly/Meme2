@@ -25,19 +25,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             style: .plain,
             target: self,
             action: #selector(editMeme))
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func editMeme() {
         let editController = self.storyboard!.instantiateViewController(withIdentifier: "Meme2ViewController") as! Meme2ViewController
         
         self.navigationController!.pushViewController(editController, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     // MARK: Table View Data Source
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.isHidden = false
         
         //get the save Memes
         
@@ -48,12 +49,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         print("allMemes === ",allMemes.count)
         tableView.reloadData()
+         self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = true
-        
         
     }
     
@@ -64,10 +64,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")!
+        
         let meme = self.allMemes[(indexPath as NSIndexPath).row]
         
+        // textfield1.text! + textfield2.text!
+        let first = meme.topTextField! + meme.bottomTextField! 
+       
+        
         // Set the name and image
-        cell.textLabel?.text = meme.bottomTextField
+        cell.textLabel?.text = first
         cell.imageView?.image =  meme.memedImage
         
 //        // If the cell has a detail label, we will put the evil scheme in.

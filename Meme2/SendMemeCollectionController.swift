@@ -36,6 +36,7 @@ class SendMemeCollectionController: UICollectionViewController {
         let editController = self.storyboard!.instantiateViewController(withIdentifier: "Meme2ViewController") as! Meme2ViewController
         
         self.navigationController!.pushViewController(editController, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     
@@ -56,8 +57,6 @@ class SendMemeCollectionController: UICollectionViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = true
-     
         
     }
     
