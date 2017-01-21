@@ -25,11 +25,14 @@ class MemeDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
         self.topText.text = self.meme.topTextField
+      
         self.bottomText.text = self.meme.bottomTextField
         
-        self.imageView!.image = meme.originalImage
+        self.imageView!.image = meme.memedImage
         
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {

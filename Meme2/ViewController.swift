@@ -13,8 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: Properties
     
     @IBOutlet weak var tableView: UITableView!
-    // Get ahold of some villains, for the table
-    // This is an array of Villain instances
+
     var allMemes = [Meme]()
     
     override func viewDidLoad() {
@@ -73,21 +72,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // Set the name and image
         cell.textLabel?.text = first
-       
-        cell.imageView?.image =  meme.originalImage
-        
-//        // If the cell has a detail label, we will put the evil scheme in.
-//        if let detailTextLabel = cell.detailTextLabel {
-//            detailTextLabel.text = "Scheme: \(villain.evilScheme)"
-//        }
+        cell.imageView?.image =  meme.memedImage
 
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "VillainDetailViewController") as! VillainDetailViewController
-//        detailController.villain = self.allVillains[(indexPath as NSIndexPath).row]
-//        self.navigationController!.pushViewController(detailController, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        detailController.meme = self.allMemes[(indexPath as NSIndexPath).row]
+        self.navigationController!.pushViewController(detailController, animated: true)
+    }
 }
