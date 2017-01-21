@@ -36,50 +36,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uO6-qt-qkS">
-                            <size key="itemSize" width="140" height="125"/>
+                            <size key="itemSize" width="123" height="112"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="MemeViewCell" id="pCW-a8-v4z" customClass="MemeViewCell" customModule="Meme2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="140" height="125"/>
+                                <rect key="frame" x="0.0" y="0.0" width="123" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="140" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="123" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdK-pc-gu6">
-                                            <rect key="frame" x="8" y="26" width="124" height="91"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdK-pc-gu6">
+                                            <rect key="frame" x="8" y="17" width="95" height="83"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nv-bx-OsE" userLabel="TopLabel">
-                                            <rect key="frame" x="8" y="36" width="124" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nv-bx-OsE" userLabel="TopLabel">
+                                            <rect key="frame" x="8" y="17" width="85" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ien-Zj-gDu" userLabel="BottomLabel">
-                                            <rect key="frame" x="8" y="85" width="114" height="32"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ien-Zj-gDu" userLabel="BottomLabel">
+                                            <rect key="frame" x="16" y="80" width="77" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="6Nv-bx-OsE" firstAttribute="trailing" secondItem="pCW-a8-v4z" secondAttribute="trailingMargin" id="77L-bt-8qb"/>
-                                    <constraint firstItem="mdK-pc-gu6" firstAttribute="leading" secondItem="pCW-a8-v4z" secondAttribute="leadingMargin" id="7NE-G5-QzL"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="6Nv-bx-OsE" secondAttribute="bottom" constant="60" id="At6-tE-nT5"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="ien-Zj-gDu" secondAttribute="trailing" constant="10" id="DbE-Ru-Ijc"/>
-                                    <constraint firstItem="6Nv-bx-OsE" firstAttribute="leading" secondItem="pCW-a8-v4z" secondAttribute="leadingMargin" id="Om6-R9-za5"/>
-                                    <constraint firstItem="mdK-pc-gu6" firstAttribute="top" secondItem="pCW-a8-v4z" secondAttribute="topMargin" constant="18" id="Rvc-Io-KPB"/>
-                                    <constraint firstItem="mdK-pc-gu6" firstAttribute="bottom" secondItem="pCW-a8-v4z" secondAttribute="bottomMargin" id="Td1-5N-TH2"/>
-                                    <constraint firstItem="ien-Zj-gDu" firstAttribute="bottom" secondItem="pCW-a8-v4z" secondAttribute="bottomMargin" id="c7r-x8-glp"/>
-                                    <constraint firstItem="mdK-pc-gu6" firstAttribute="trailing" secondItem="pCW-a8-v4z" secondAttribute="trailingMargin" id="c9c-A4-Idh"/>
-                                    <constraint firstItem="6Nv-bx-OsE" firstAttribute="top" secondItem="pCW-a8-v4z" secondAttribute="topMargin" constant="28" id="ctm-Pm-6d7"/>
-                                    <constraint firstItem="ien-Zj-gDu" firstAttribute="top" secondItem="6Nv-bx-OsE" secondAttribute="bottom" constant="28" id="llT-oT-qvA"/>
-                                    <constraint firstItem="ien-Zj-gDu" firstAttribute="leading" secondItem="pCW-a8-v4z" secondAttribute="leadingMargin" id="ouX-vf-gAl"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="BottomLabel" destination="ien-Zj-gDu" id="VG9-gV-Zm5"/>
                                     <outlet property="ImageView" destination="mdK-pc-gu6" id="67n-Lj-gXZ"/>
@@ -295,7 +284,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="w3f-uZ-isV" secondAttribute="trailing" id="4U7-pZ-6gP"/>
                             <constraint firstItem="zfu-9X-Bsc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="9rF-ml-J6R"/>

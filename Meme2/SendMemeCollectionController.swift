@@ -87,6 +87,15 @@
             self.navigationController!.pushViewController(detailController, animated: true)
 
         }
+        
+        func adjustFlowLayout(size: CGSize) {
+            let space: CGFloat = 1.5
+            let dimension:CGFloat = size.width >= size.height ? (size.width - (5 * space)) / 6.0 :  (size.width - (2 * space)) / 3.0
+            
+//            ç.minimumInteritemSpacing = space
+//            flowLayout.minimumLineSpacing = space
+//            flowLayout.itemSize = CGSizeMake(dimension, dimension)
+        }
 
 
     }
