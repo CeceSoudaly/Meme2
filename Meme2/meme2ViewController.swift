@@ -30,6 +30,7 @@ UINavigationControllerDelegate{
     
     var memedImage: UIImage! = nil
     var memes: [Meme]!
+    var meme: Meme!
     
     @IBOutlet weak var ToolBar: UIToolbar!
     

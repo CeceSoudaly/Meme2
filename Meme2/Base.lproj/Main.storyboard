@@ -185,6 +185,60 @@
             </objects>
             <point key="canvasLocation" x="-1842.4000000000001" y="706.59670164917543"/>
         </scene>
+        <!--MemeDetailViewController-->
+        <scene sceneID="SFS-xG-m9x">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gIr-18-3mg" userLabel="MemeDetailViewController" customClass="MemeDetailViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CvJ-ex-HVy"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcv-C2-5sH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WmO-Gw-1Z5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3VB-qf-UcX">
+                                <rect key="frame" x="10" y="0.0" width="359" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zls-b0-FW9" userLabel="Top">
+                                <rect key="frame" x="47" y="54" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Botton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwH-yQ-gfd">
+                                <rect key="frame" x="47" y="531" width="272" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwH-yQ-gfd" firstAttribute="leading" secondItem="WmO-Gw-1Z5" secondAttribute="leadingMargin" constant="31" id="AwS-4E-rgB"/>
+                            <constraint firstItem="3VB-qf-UcX" firstAttribute="top" secondItem="WmO-Gw-1Z5" secondAttribute="top" id="FBl-ak-Xtu"/>
+                            <constraint firstItem="pwH-yQ-gfd" firstAttribute="top" secondItem="zls-b0-FW9" secondAttribute="bottom" constant="456" id="JkM-WE-eim"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zls-b0-FW9" secondAttribute="trailing" constant="40" id="QaC-4n-bXS"/>
+                            <constraint firstItem="3VB-qf-UcX" firstAttribute="leading" secondItem="WmO-Gw-1Z5" secondAttribute="leading" constant="10" id="co9-om-KmW"/>
+                            <constraint firstItem="zls-b0-FW9" firstAttribute="leading" secondItem="WmO-Gw-1Z5" secondAttribute="leadingMargin" constant="31" id="f8a-qS-zOf"/>
+                            <constraint firstItem="zls-b0-FW9" firstAttribute="top" secondItem="CvJ-ex-HVy" secondAttribute="bottom" constant="34" id="gQY-DZ-Vra"/>
+                            <constraint firstItem="pwH-yQ-gfd" firstAttribute="top" secondItem="zls-b0-FW9" secondAttribute="bottom" constant="456" id="juo-HM-XXF"/>
+                            <constraint firstAttribute="trailing" secondItem="3VB-qf-UcX" secondAttribute="trailing" constant="6" id="jw2-cA-rVk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pwH-yQ-gfd" secondAttribute="trailing" constant="40" id="mO1-MT-hJX"/>
+                            <constraint firstItem="zcv-C2-5sH" firstAttribute="top" secondItem="3VB-qf-UcX" secondAttribute="bottom" constant="20" id="n7q-AV-Gas"/>
+                            <constraint firstItem="zcv-C2-5sH" firstAttribute="top" secondItem="pwH-yQ-gfd" secondAttribute="bottom" constant="103" id="nWw-XS-E75"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="pwH-yQ-gfd" id="XQI-iO-eQn"/>
+                        <outlet property="imageView" destination="3VB-qf-UcX" id="Ii3-mJ-VFQ"/>
+                        <outlet property="topText" destination="zls-b0-FW9" id="fjE-U4-eop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xU2-kO-SeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="726.38680659670172"/>
+        </scene>
         <!--Meme2 View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -241,7 +295,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="w3f-uZ-isV" secondAttribute="trailing" id="4U7-pZ-6gP"/>
                             <constraint firstItem="zfu-9X-Bsc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="9rF-ml-J6R"/>
@@ -272,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1041" y="-31"/>
+            <point key="canvasLocation" x="-980" y="-37"/>
         </scene>
     </scenes>
 </document>

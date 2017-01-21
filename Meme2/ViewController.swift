@@ -73,13 +73,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // Set the name and image
         cell.textLabel?.text = first
-        cell.imageView?.image =  meme.memedImage
+       
+        cell.imageView?.image =  meme.originalImage
         
 //        // If the cell has a detail label, we will put the evil scheme in.
 //        if let detailTextLabel = cell.detailTextLabel {
 //            detailTextLabel.text = "Scheme: \(villain.evilScheme)"
 //        }
-//         tableView.reloadData()
+
         return cell
     }
     
