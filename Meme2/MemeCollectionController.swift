@@ -27,11 +27,15 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             //TODO: Implement flowLayout here.
-            navigationItem.rightBarButtonItem = UIBarButtonItem(
-                title: "EditMeme",
-                style: .plain,
-                target: self,
-                action: #selector(editMeme))
+//            navigationItem.rightBarButtonItem = UIBarButtonItem(
+//                title: "EditMeme",
+//                style: .plain,
+//                target: self,
+//                action: #selector(editMeme))
+            
+          navigationItem.rightBarButtonItem =   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(editMeme))
+            
+            self.navigationItem.rightBarButtonItem = self.editButtonItem
             
             guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else { return }
             flowLayout.minimumInteritemSpacing = margin
