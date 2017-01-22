@@ -14,7 +14,7 @@ import Social
 
 
 
-class Meme2ViewController: UIViewController , UITextFieldDelegate, UIImagePickerControllerDelegate,
+class MemeViewController: UIViewController , UITextFieldDelegate, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     
     @IBOutlet weak var imagePicker: UIImageView!
@@ -143,9 +143,6 @@ UINavigationControllerDelegate{
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
         
-         print("1 hello... ",appDelegate.memes)
-         print("2 adding... ",appDelegate.memes.count)
-        
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -216,8 +213,8 @@ UINavigationControllerDelegate{
     
     func subscribeToKeyboardNotifications() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(Meme2ViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(Meme2ViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MemeViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MemeViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Properties
     
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func editMeme() {
-        let editController = self.storyboard!.instantiateViewController(withIdentifier: "Meme2ViewController") as! Meme2ViewController
+        let editController = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
         
         self.navigationController!.pushViewController(editController, animated: true)
         self.tabBarController?.tabBar.isHidden = true

@@ -20,22 +20,22 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AhY-oN-mP9" kind="relationship" relationship="rootViewController" id="Ve8-u3-K74"/>
+                        <segue destination="AhY-oN-mP9" kind="relationship" relationship="rootViewController" id="vo6-Ra-yyH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83C-Sg-9zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2587" y="-37"/>
         </scene>
-        <!--Send Meme Collection Controller-->
+        <!--Meme Collection Controller-->
         <scene sceneID="s89-uV-gBA">
             <objects>
-                <collectionViewController id="AhY-oN-mP9" customClass="SendMemeCollectionController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Z7x-N4-Wv4">
+                <collectionViewController storyboardIdentifier="MemeCollectionController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AhY-oN-mP9" customClass="MemeCollectionController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Z7x-N4-Wv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uO6-qt-qkS">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5wt-t2-mff">
                             <size key="itemSize" width="123" height="112"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -69,6 +69,7 @@
                                         </label>
                                     </subviews>
                                 </view>
+                                <size key="customSize" width="123" height="112"/>
                                 <connections>
                                     <outlet property="BottomLabel" destination="ien-Zj-gDu" id="VG9-gV-Zm5"/>
                                     <outlet property="ImageView" destination="mdK-pc-gu6" id="67n-Lj-gXZ"/>
@@ -115,17 +116,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rUI-gw-pTe" kind="relationship" relationship="rootViewController" id="1RD-Qj-0vI"/>
+                        <segue destination="rUI-gw-pTe" kind="relationship" relationship="rootViewController" id="7xD-mV-OIv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfo-dp-yMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2588" y="708"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Table View Controller-->
         <scene sceneID="qfX-ut-8Cg">
             <objects>
-                <viewController id="rUI-gw-pTe" customClass="ViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rUI-gw-pTe" customClass="MemeTableViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k75-ub-A5E"/>
                         <viewControllerLayoutGuide type="bottom" id="teT-z0-Yyk"/>
@@ -228,10 +229,10 @@
             </objects>
             <point key="canvasLocation" x="-975.20000000000005" y="726.38680659670172"/>
         </scene>
-        <!--Meme2 View Controller-->
+        <!--Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Meme2ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Meme2ViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MemeViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

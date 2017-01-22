@@ -9,7 +9,7 @@
     import Foundation
     import UIKit
 
-    class SendMemeCollectionController: UICollectionViewController {
+    class MemeCollectionController: UICollectionViewController {
 
 
     // MARK: Life Cycle
@@ -19,6 +19,8 @@
     //    let appDelegate = object as! AppDelegate
 
     var allMemes = [Meme]()
+    
+    let margin: CGFloat = 10, cellsPerRow: CGFloat = 3
 
 
 
@@ -30,10 +32,15 @@
                 style: .plain,
                 target: self,
                 action: #selector(editMeme))
+            
+            guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+            flowLayout.minimumInteritemSpacing = margin
+            flowLayout.minimumLineSpacing = margin
+            flowLayout.sectionInset = UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin) // not required
         }
 
         func editMeme() {
-            let editController = self.storyboard!.instantiateViewController(withIdentifier: "Meme2ViewController") as! Meme2ViewController
+            let editController = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
             
             self.navigationController!.pushViewController(editController, animated: true)
             self.tabBarController?.tabBar.isHidden = true
@@ -51,7 +58,6 @@
             
             allMemes = appDelegate.memes
             
-            print("allMemes === ",allMemes.count)
             collectionView?.reloadData()
          }
 
@@ -88,15 +94,12 @@
 
         }
         
-        func adjustFlowLayout(size: CGSize) {
-            let space: CGFloat = 1.5
-            let dimension:CGFloat = size.width >= size.height ? (size.width - (5 * space)) / 6.0 :  (size.width - (2 * space)) / 3.0
-            
-//            ç.minimumInteritemSpacing = space
-//            flowLayout.minimumLineSpacing = space
-//            flowLayout.itemSize = CGSizeMake(dimension, dimension)
+        override func viewWillLayoutSubviews() {
+            guard let collectionView = collectionView, let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+            let marginsAndInsets = flowLayout.sectionInset.left + flowLayout.sectionInset.right + flowLayout.minimumInteritemSpacing * (cellsPerRow - 1)
+            let itemWidth = (collectionView.bounds.size.width - marginsAndInsets) / cellsPerRow
+            flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth)
         }
-
 
     }
 
