@@ -37,6 +37,22 @@ class MemeDetailViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+          navigationItem.rightBarButtonItem =   UIBarButtonItem(title: "EditMemes", style: .plain, target: self, action: #selector(editMeme))
+      
+        self.tabBarController?.tabBar.isHidden = false
+        
+    }
+    
+    func editMeme() {
+        let editController = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
+        
+        self.navigationController!.pushViewController(editController, animated: true)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
 }
