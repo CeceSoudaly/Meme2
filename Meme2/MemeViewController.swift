@@ -81,6 +81,7 @@ UINavigationControllerDelegate{
             setSentMeme(sentMeme: sentMeme!)
         }
   
+        ToolBar.isHidden = false
     }
     
     func setSentMeme(sentMeme: Meme) {
