@@ -64,7 +64,7 @@ UINavigationControllerDelegate{
         super.viewDidLoad()
         
         self.navigationItem.setHidesBackButton(true, animated:true);
-        navigationItem.rightBarButtonItem =   UIBarButtonItem(title: "Cancel", style: .bordered, target: nil, action: nil)
+         navigationItem.rightBarButtonItem =   UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(Cancel))
         
         picker.delegate = self
         stylizeTextField(textField: topText)
@@ -80,6 +80,12 @@ UINavigationControllerDelegate{
         memes = appDelegate.memes
        
     }
+    
+    func Cancel() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+
     
     func modifiedImage()
     {
