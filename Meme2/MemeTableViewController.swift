@@ -18,12 +18,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //TODO: Implement flowLayout here.
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(
-//            title: "EditMeme",
-//            style: .plain,
-//            target: self,
-//            action: #selector(editMeme))
         navigationItem.rightBarButtonItem =   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(editMeme))
         self.tabBarController?.tabBar.isHidden = false
     }

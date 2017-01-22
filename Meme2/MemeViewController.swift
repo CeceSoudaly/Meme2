@@ -62,6 +62,10 @@ UINavigationControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        navigationItem.rightBarButtonItem =   UIBarButtonItem(title: "Cancel", style: .bordered, target: nil, action: nil)
+        
         picker.delegate = self
         stylizeTextField(textField: topText)
         stylizeTextField(textField: bottomText)
@@ -74,8 +78,7 @@ UINavigationControllerDelegate{
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
-        print("blah... ",memes)
-        
+       
     }
     
     func modifiedImage()
