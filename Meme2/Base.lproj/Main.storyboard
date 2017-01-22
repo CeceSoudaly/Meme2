@@ -110,7 +110,7 @@
         <scene sceneID="D61-GF-aUI">
             <objects>
                 <navigationController storyboardIdentifier="Table" id="DAQ-ae-XNL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" selectedImage="table_30x30" id="epQ-1x-vNK"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="table_30x30" selectedImage="table_30x30" id="epQ-1x-vNK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mVo-5V-sRJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

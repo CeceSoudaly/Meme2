@@ -86,9 +86,11 @@ UINavigationControllerDelegate{
     
     func setSentMeme(sentMeme: Meme) {
         
-        imagePicker?.image = sentMeme.memedImage
+        imagePicker?.image = sentMeme.originalImage
         topText?.text = sentMeme.topTextField
         bottomText?.text = sentMeme.bottomTextField
+        topText.isHidden = false
+        bottomText.isHidden = false
         
     }
     
