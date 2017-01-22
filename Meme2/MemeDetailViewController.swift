@@ -50,6 +50,9 @@ class MemeDetailViewController: UIViewController {
     
     func editMeme() {
         let editController = self.storyboard!.instantiateViewController(withIdentifier: "MemeViewController") as! MemeViewController
+ 
+        
+        editController.sentMeme = self.meme
         
         self.navigationController!.pushViewController(editController, animated: true)
         self.tabBarController?.tabBar.isHidden = true

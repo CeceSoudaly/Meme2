@@ -29,8 +29,9 @@ UINavigationControllerDelegate{
     let picker = UIImagePickerController()
     
     var memedImage: UIImage! = nil
-    var memes: [Meme]!
     var meme: Meme!
+    var sentMeme: Meme?
+  
     
     @IBOutlet weak var ToolBar: UIToolbar!
     
@@ -76,9 +77,18 @@ UINavigationControllerDelegate{
             takePictue.isEnabled = false;
         }
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
-       
+        if !(sentMeme == nil) {
+            setSentMeme(sentMeme: sentMeme!)
+        }
+  
+    }
+    
+    func setSentMeme(sentMeme: Meme) {
+        
+        imagePicker?.image = sentMeme.memedImage
+        topText?.text = sentMeme.topTextField
+        bottomText?.text = sentMeme.bottomTextField
+        
     }
     
     func Cancel() {
