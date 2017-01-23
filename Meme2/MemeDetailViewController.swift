@@ -42,10 +42,18 @@ class MemeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-          navigationItem.rightBarButtonItem =   UIBarButtonItem(title: "EditMemes", style: .plain, target: self, action: #selector(editMeme))
+        
+        self.navigationItem.setHidesBackButton(true, animated:true);
+        navigationItem.rightBarButtonItem =   UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editMeme))
+        
+         navigationItem.leftBarButtonItem =   UIBarButtonItem(title: "SentMemes", style: .plain, target: self, action: #selector(SentMemes))
       
         self.tabBarController?.tabBar.isHidden = false
         
+    }
+    
+    func SentMemes() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func editMeme() {

@@ -20,15 +20,26 @@
 
     var allMemes = [Meme]()
     
-    let margin: CGFloat = 10, cellsPerRow: CGFloat = 3
-
-
+    let margin: CGFloat = 10
+    let cellsPerRow: CGFloat = 3
+    
+    let memeFontAttributes = [
+        
+        NSStrokeColorAttributeName: UIColor.black,
+        NSForegroundColorAttributeName: UIColor.white,
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-Bold", size: 30)!,
+        NSStrokeWidthAttributeName: -3.0
+        
+        ] as [String : Any]
+    
 
         override func viewDidLoad() {
             super.viewDidLoad()
             
             navigationItem.rightBarButtonItem =   UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(editMeme))
         
+            
+            //view flowlayout
             guard let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else { return }
             flowLayout.minimumInteritemSpacing = margin
             flowLayout.minimumLineSpacing = margin
@@ -73,10 +84,14 @@
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeViewCell", for: indexPath) as! MemeViewCell
             let meme = self.allMemes[(indexPath as NSIndexPath).row]
             
-            // Set the name and image
-            cell.TopLabel.text = meme.topTextField
-            cell.BottomLabel.text = meme.bottomTextField
-            cell.ImageView.image = meme.originalImage
+//            cell.TopLabel.font = UIFont (name: "HelveticaNeue-Bold", size: 30)
+//            cell.BottomLabel.font = UIFont (name: "HelveticaNeue-Bold", size: 30)
+//            // Set the name and image
+//            cell.TopLabel?.text = meme.topTextField
+//            cell.BottomLabel?.text = meme.bottomTextField
+            cell.ImageView?.image = meme.memedImage
+           
+
             
             return cell
         }
