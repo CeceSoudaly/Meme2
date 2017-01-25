@@ -239,16 +239,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ZvC-gr-wdj"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="bottomText" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ymV-GW-ApZ">
-                                <rect key="frame" x="64" y="516" width="261" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tlL-X6-JAg"/>
-                                </connections>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3f-uZ-isV">
                                 <rect key="frame" x="3" y="623" width="368" height="44"/>
                                 <items>
@@ -269,9 +259,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="bottomText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ymV-GW-ApZ">
+                                <rect key="frame" x="57" y="563" width="261" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tlL-X6-JAg"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="w3f-uZ-isV" firstAttribute="top" secondItem="ymV-GW-ApZ" secondAttribute="bottom" constant="40" id="0R7-zA-eNB"/>
                             <constraint firstItem="aAK-no-bvy" firstAttribute="trailing" secondItem="ymV-GW-ApZ" secondAttribute="trailing" id="45o-Qh-X8q"/>
                             <constraint firstItem="zfu-9X-Bsc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-6" id="4Fd-e7-rXD"/>
                             <constraint firstAttribute="trailing" secondItem="zfu-9X-Bsc" secondAttribute="trailing" id="5f3-1a-Wkv"/>
@@ -281,10 +282,8 @@
                             <constraint firstItem="aAK-no-bvy" firstAttribute="leading" secondItem="ymV-GW-ApZ" secondAttribute="leading" id="D24-vB-Y5P"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aAK-no-bvy" secondAttribute="trailing" constant="34" id="EQT-1a-cAZ"/>
                             <constraint firstItem="zfu-9X-Bsc" firstAttribute="centerX" secondItem="w3f-uZ-isV" secondAttribute="centerX" id="K0w-Xb-S3I"/>
-                            <constraint firstItem="ymV-GW-ApZ" firstAttribute="top" secondItem="zfu-9X-Bsc" secondAttribute="bottom" constant="-107" id="UOf-o1-4jU"/>
                             <constraint firstItem="zfu-9X-Bsc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WHS-bh-uhU"/>
                             <constraint firstItem="aAK-no-bvy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="mlN-2L-gaZ"/>
-                            <constraint firstItem="w3f-uZ-isV" firstAttribute="top" secondItem="ymV-GW-ApZ" secondAttribute="bottom" constant="77" id="vom-Gd-XKg"/>
                             <constraint firstItem="w3f-uZ-isV" firstAttribute="top" secondItem="zfu-9X-Bsc" secondAttribute="bottom" id="wh1-KL-JFf"/>
                         </constraints>
                     </view>

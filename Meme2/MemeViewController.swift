@@ -218,6 +218,7 @@ UINavigationControllerDelegate{
         }else{
             topText.text = ""
         }
+         toolBar.isHidden = true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -225,6 +226,7 @@ UINavigationControllerDelegate{
         if(textField == bottomText){
             unsubscribeFromKeyboardNotifications()
         }
+         toolBar.isHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
