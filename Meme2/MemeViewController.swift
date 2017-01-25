@@ -1,5 +1,5 @@
 //
-//  meme2ViewController.swift
+//  MemeViewController
 //  Meme2
 //
 //  Created by Cece Soudaly on 1/3/17.
@@ -33,7 +33,7 @@ UINavigationControllerDelegate{
     var sentMeme: Meme?
   
     
-    @IBOutlet weak var ToolBar: UIToolbar!
+    @IBOutlet weak var toolBar: UIToolbar!
     
     let memeTextAttributes = [
         
@@ -81,7 +81,7 @@ UINavigationControllerDelegate{
             setSentMeme(sentMeme: sentMeme!)
         }
   
-        ToolBar.isHidden = false
+        toolBar.isHidden = false
     }
     
     func setSentMeme(sentMeme: Meme) {
@@ -171,13 +171,13 @@ UINavigationControllerDelegate{
     func generateMemedImage() -> UIImage {
         
         //hide the tool bar
-        ToolBar.isHidden = true
+        toolBar.isHidden = true
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         //resumed the tool bar
-        ToolBar.isHidden = false
+        toolBar.isHidden = false
         
         return memedImage
     }
